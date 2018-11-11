@@ -4,6 +4,7 @@ public class Theme {
     private String mUrl;
     private String mPicture;
     private String mName;
+    private String mFileName;
     private boolean mIsDownloaded;
 
     public Theme() {}
@@ -12,32 +13,39 @@ public class Theme {
         return mUrl;
     }
 
-    public void setUrl(String mUrl) {
-        this.mUrl = mUrl;
+    public void setUrl(String url) {
+        this.mUrl = url;
     }
 
     public String getPicture() {
         return mPicture;
     }
 
-    public void setPicture(String mPicture) {
-        this.mPicture = mPicture;
+    public void setPicture(String picture) {
+        this.mPicture = picture;
     }
 
     public String getName() {
         return mName;
     }
 
-    public void setName(String mName) {
-        this.mName = mName;
+    public void setName(String name) {
+        this.mName = name;
     }
 
+    public String getFileName() {
+        return mFileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.mFileName = fileName;
+    }
 
     public boolean isDownloaded() {
         return mIsDownloaded;
     }
 
-    public void setDownloaded(boolean mIsDownloaded) {
-        this.mIsDownloaded = mIsDownloaded;
+    public void setDownloaded(boolean isDownloaded) {
+        this.mIsDownloaded = isDownloaded;
     }
 }

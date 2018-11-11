@@ -29,7 +29,7 @@ public class ThemeFactory {
                     case XmlPullParser.START_TAG:
                         if (xpp.getName().equals("file")) {
                             theme = new Theme();
-                            theme.setName(xpp.getAttributeValue(null, "name"));
+                            theme.setFileName(xpp.getAttributeValue(null, "name"));
                             theme.setPicture(xpp.getAttributeValue(null, "picture"));
                             theme.setUrl(xpp.getAttributeValue(null, "url"));
                             list.add(theme);
@@ -45,6 +45,7 @@ public class ThemeFactory {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        list = addNames(list);
         return checkDownloads(list);
     }
 
@@ -57,11 +58,19 @@ public class ThemeFactory {
                 for (int i = 0; i < files.length; i++) {
                     file = files[i].substring(0, files[i].length() - 4);
                     for (Theme theme : list) {
-                        if (theme.getName().equals(file))
+                        if (theme.getFileName().equals(file))
                             theme.setDownloaded(true);
                     }
                 }
             }
+        }
+        return list;
+    }
+
+    private ArrayList<Theme> addNames(ArrayList<Theme> list) {
+        for (Theme theme : list) {
+            int resId = mContext.getResources().getIdentifier(theme.getFileName(), "string", mContext.getPackageName());
+            theme.setName(mContext.getString(resId));
         }
         return list;
     }

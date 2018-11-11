@@ -45,20 +45,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mThemes = mFactory.getThemes(this);
-        changeThemesName();
         mAdapter = new GridAdapter(this, mThemes);
         mGrid.setAdapter(mAdapter);
         mGrid.setNumColumns(3);
         mGrid.setHorizontalSpacing(8);
         mGrid.setVerticalSpacing(10);
         mGrid.setOnItemClickListener(mItemListener);
-    }
-
-    private void changeThemesName() {
-        for (Theme theme : mThemes) {
-            int resId = getResources().getIdentifier(theme.getName(), "string", getPackageName());
-            theme.setName(getString(resId));
-        }
     }
 
     @Override
@@ -93,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, DownloadService.class);
             intent.putExtra("url", mThemes.get(position).getUrl());
             intent.putExtra("receiver", new DownloadReceiver(new Handler()));
-            intent.putExtra("name", mThemes.get(position).getName());
+            intent.putExtra("name", mThemes.get(position).getFileName());
             intent.putExtra("position", position);
             startService(intent);
         }
