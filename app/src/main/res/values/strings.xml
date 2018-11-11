@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">About</string>
+    <string name="about_text">Author: github.com/Arkellyga</string>
+    <string name="already_downloaded">This theme already installed</string>
+    <string name="app_name">Eui Themes</string>
+    <string name="download_error">Download error. Please, check your network connection</string>
+    <string name="download_successful">Download successful</string>
+    <string name="theme01">Testing 1</string>
+    <string name="theme02">Testing 2</string>
+    <string name="theme03">Testing 3</string>
+    <string name="theme04">Testing 4</string>
+    <string name="theme05">Testing 5</string>
+    <string name="theme06">Testing 6</string>
+    <string name="theme07">Testing 7</string>
+    <string name="theme08">Testing 8</string>
+    <string name="theme09">Testing 9</string>
+    <string name="eui_themes">Online Themes</string>
+</resources>

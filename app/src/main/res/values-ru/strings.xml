@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">О приложении</string>
+    <string name="about_text">Author: github.com/Arkellyga</string>
+    <string name="already_downloaded">Тема уже загружена</string>
+    <string name="app_name">Eui Themes</string>
+    <string name="download_error">Во время загрузки произошла ошибка</string>
+    <string name="download_successful">Загрузка выполнена</string>
+    <string name="theme01">тестирование 1</string>
+    <string name="theme02">тестирование 2</string>
+    <string name="theme03">тестирование 3</string>
+    <string name="theme04">тестирование 4</string>
+    <string name="theme05">тестирование 5</string>
+    <string name="theme06">тестирование 6</string>
+    <string name="theme07">тестирование 7</string>
+    <string name="theme08">тестирование 8</string>
+    <string name="theme09">тестирование 9</string>
+    <string name="eui_themes">Темы в сети</string>
+</resources>
